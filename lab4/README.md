@@ -1,3 +1,4 @@
+<pre><code>
 Class - TableManager
 Responsibility                        Collaberator
 .Keep record of tables and
@@ -12,7 +13,7 @@ reservations and number of guests.
 .Register reservations              TableManager
 .Message confirmation               Customer
 .Message cancellation               Customer
-
+</code></pre>
 
 Patterns used -
 1. State Pattern
