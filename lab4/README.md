@@ -13,10 +13,11 @@ reservations and number of guests.
 .Register reservations              TableManager
 .Message confirmation               Customer
 .Message cancellation               Customer
-</code></pre>
+
 
 Patterns used -
 1. State Pattern
 This is used by TableManager to maintain states of tables like Empty,Reserved,Occupied.
 2. Observer Pattern
 This is used by TableManager and WaitListManager to identify and manager wait list.
+</code></pre>
