@@ -76,7 +76,7 @@ public class Burger extends AbstractItem{
 				.append(selection.getShortName())
 				.append("\n");
 		printTopping(content);
-		content.append("{{{{"+selection.getMeat().getShortName()+"}}}}");
+		content.append("{{{{"+selection.getMeat().getShortName()+"}}}}\n");
 		return content.toString();
 	}
 	
