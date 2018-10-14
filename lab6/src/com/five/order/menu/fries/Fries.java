@@ -41,7 +41,9 @@ public class Fries extends AbstractItem {
 				.append("\t")
 				.append(size.getShortName())
 				.append(" ")
-				.append(selection.getShortName());
+				.append(selection.getShortName())
+				.append("\t")
+				.append(getPrice());
 		return content.toString();
 	}
 

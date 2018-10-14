@@ -4,23 +4,29 @@ import com.five.order.menu.ItemEntity;
 
 public enum BurgerToppings implements ItemEntity{
 
-	LETTUCE("LETTUCE"),
-	TOMATO("TOMATO"),
-	GRILLED_ONION("G ONION"),
-	JALAPANO_GRILLED("JALA Grilled"),
-	MAYO("Mayo"),
-	KETCHUP("KETCHUP"),
-	RELISH("RELISH");
+	LETTUCE("LETTUCE",true),
+	TOMATO("TOMATO",true),
+	GRILLED_ONION("G ONION",false),
+	JALAPANO_GRILLED("JALA Grilled",false),
+	MAYO("Mayo",false),
+	KETCHUP("KETCHUP",false),
+	RELISH("RELISH",true);
 
 	private final String shortName;
+	private final boolean isTop;
 	
-	private BurgerToppings(String shortName) {
+	private BurgerToppings(String shortName,boolean isTop) {
 		this.shortName = shortName;
+		this.isTop=isTop;
 	}
 
 	@Override
 	public String getShortName() {
 		return shortName;
+	}
+
+	public boolean isTop() {
+		return isTop;
 	}
 
 }
