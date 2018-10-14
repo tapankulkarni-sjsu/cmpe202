@@ -2,9 +2,10 @@ package com.five.order.menu.burger;
 
 import java.util.List;
 
-import com.five.order.menu.Item;
+import com.five.order.menu.AbstractItem;
+import com.five.order.menu.ItemType;
 
-public class Burger implements Item{
+public class Burger extends AbstractItem{
 
 	private BurgerOptions selection;
 	List<BurgerToppings> toppings;
@@ -27,7 +28,12 @@ public class Burger implements Item{
 
 	@Override
 	public double getPrice() {
-		return selection.getPrice();
+		return selection.getPrice()*getQuantity();
+	}
+
+	@Override
+	public ItemType getType() {
+		return ItemType.BURGER;
 	}
 	
 }
