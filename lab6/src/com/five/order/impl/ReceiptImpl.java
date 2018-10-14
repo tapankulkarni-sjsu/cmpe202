@@ -14,10 +14,14 @@ public class ReceiptImpl implements Receipt {
 	
 	@Override
 	public String print() {
-		StringBuilder content = new StringBuilder("FIVE GUYS");
+		StringBuilder content = new StringBuilder("FIVE GUYS").append("\n\t\t\t-----Receipt------\n");
+		double subtotal=0.0;
 		for(Item item:order.getItems()) {
 			content.append(item.printReceipt());
+			subtotal+=item.getPrice();
 		}
+		content.append(String.format("\nsubtotal = %.2f",new Double(subtotal)));
+		content.append("\n");
 		return content.toString();
 	}
 	

@@ -23,18 +23,20 @@ public class Main {
 		List<BurgerToppings> toppings=new ArrayList<>();
 		toppings.add(BurgerToppings.GRILLED_ONION);
 		toppings.add(BurgerToppings.JALAPANO_GRILLED);
-		toppings.add(BurgerToppings.TOMATO);
 		toppings.add(BurgerToppings.LETTUCE);
+		toppings.add(BurgerToppings.TOMATO);
 		burger.setToppings(toppings);
+		burger.setQuantity(1);
 		orderRequest.addMenuItem(burger);
 		Fries fries = new Fries();
 		fries.setSelection(FriesOptions.CAJUN);
 		fries.setSize(FriesSizes.LITTLE);
+		fries.setQuantity(1);
 		orderRequest.addMenuItem(fries);
 		OrderService service = new OrderServiceImpl();
 		Order order = service.submit(orderRequest);
-		System.out.println(order.getPackingSlip().print());
 		System.out.println(order.getReceipt().print());
+		System.out.println(order.getPackingSlip().print());
 	}
 	
 }

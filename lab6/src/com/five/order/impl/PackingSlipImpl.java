@@ -14,10 +14,11 @@ public class PackingSlipImpl implements PackingSlip{
 
 	@Override
 	public String print() {
-		StringBuilder content = new StringBuilder("FIVE GUYS");
+		StringBuilder content = new StringBuilder("FIVE GUYS").append("\n\t\t\t-----Packing Slip------\n");;
 		for(Item item:order.getItems()) {
 			content.append(item.printPacking());
 		}
+		content.append("\n");
 		return content.toString();
 	}
 	
