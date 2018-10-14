@@ -1,18 +1,27 @@
 package com.burger.order.service.menu.burger;
 
-public enum BurgerOptions {
+import com.burger.order.service.menu.ItemEntity;
 
-	CHEESEBURGER(MeatOptions.HAM),
-	LITTLE_BACON_BERGER(MeatOptions.BACON);
+public enum BurgerOptions implements ItemEntity{
+
+	CHEESEBURGER("CHEESE",MeatOptions.HAM),
+	LITTLE_BACON_BURGER("LBB",MeatOptions.BACON);
 	
 	private final MeatOptions meat;
+	private final String shortName;
 	
-	private BurgerOptions(MeatOptions meatParam) {
+	private BurgerOptions(String shortName,MeatOptions meatParam) {
+		this.shortName = shortName;
 		this.meat = meatParam;
 	}
 
 	public MeatOptions getMeat() {
 		return meat;
+	}
+	
+	@Override
+	public String getShortName() {
+		return shortName;
 	}
 	
 }
