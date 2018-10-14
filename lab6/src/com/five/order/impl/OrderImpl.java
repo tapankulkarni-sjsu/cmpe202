@@ -21,14 +21,12 @@ public class OrderImpl implements Order {
 
 	@Override
 	public Receipt getReceipt() {
-
-		return null;
+		return new ReceiptImpl(this);
 	}
 
 	@Override
 	public PackingSlip getPackingSlip() {
-		// TODO Auto-generated method stub
-		return null;
+		return new PackingSlipImpl(this);
 	}	
 	
 }

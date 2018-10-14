@@ -33,8 +33,8 @@ public class Main {
 		orderRequest.addMenuItem(fries);
 		OrderService service = new OrderServiceImpl();
 		Order order = service.submit(orderRequest);
-		System.out.println(order.getPackingSlip());
-		System.out.println(order.getReceipt());
+		System.out.println(order.getPackingSlip().print());
+		System.out.println(order.getReceipt().print());
 	}
 	
 }

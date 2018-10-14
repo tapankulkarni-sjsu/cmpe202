@@ -18,7 +18,7 @@ public class PackingSlipImpl implements PackingSlip{
 		for(Item item:order.getItems()) {
 			content.append(item.printPacking());
 		}
-		return null;
+		return content.toString();
 	}
 	
 }

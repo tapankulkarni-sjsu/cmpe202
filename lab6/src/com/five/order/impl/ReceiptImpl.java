@@ -18,7 +18,7 @@ public class ReceiptImpl implements Receipt {
 		for(Item item:order.getItems()) {
 			content.append(item.printReceipt());
 		}
-		return null;
+		return content.toString();
 	}
 	
 	
