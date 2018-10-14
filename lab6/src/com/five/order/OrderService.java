@@ -1,4 +1,4 @@
-package com.burger.order.service;
+package com.five.order;
 
 public interface OrderService {
 

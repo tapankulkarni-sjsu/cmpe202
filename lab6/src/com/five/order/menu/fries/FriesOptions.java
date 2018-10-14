@@ -1,6 +1,6 @@
-package com.burger.order.service.menu.fries;
+package com.five.order.menu.fries;
 
-import com.burger.order.service.menu.ItemEntity;
+import com.five.order.menu.ItemEntity;
 
 public enum FriesOptions implements ItemEntity{
 	

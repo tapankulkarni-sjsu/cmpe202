@@ -1,10 +1,10 @@
-package com.burger.order.service.menu.burger;
+package com.five.order.menu.burger;
 
-import com.burger.order.service.menu.ItemEntity;
+import com.five.order.menu.ItemEntity;
 
 public enum MeatOptions implements ItemEntity{
 
-	BEEF("BEEf"),
+	BEEF("BEEF"),
 	BACON("BACON"),
 	HAM("HAM");
 	

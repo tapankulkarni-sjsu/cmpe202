@@ -1,8 +1,8 @@
-package com.burger.order.service.menu.burger;
+package com.five.order.menu.burger;
 
 import java.util.List;
 
-import com.burger.order.service.menu.Item;
+import com.five.order.menu.Item;
 
 public class Burger implements Item{
 
@@ -25,4 +25,9 @@ public class Burger implements Item{
 		this.toppings = toppings;
 	}
 
+	@Override
+	public double getPrice() {
+		return selection.getPrice();
+	}
+	
 }

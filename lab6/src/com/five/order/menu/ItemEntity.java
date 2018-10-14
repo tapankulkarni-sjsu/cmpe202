@@ -1,4 +1,4 @@
-package com.burger.order.service.menu;
+package com.five.order.menu;
 
 public interface ItemEntity {
 	
