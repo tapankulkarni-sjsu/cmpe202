@@ -1,6 +1,7 @@
 public class Premium extends LeafDecorator
 {
-    private String[] options ;
+    private static final int DEFAULT_PRICE = 1;
+	private PricedListDecorator options =new PricedListDecorator();
     
     
     public Premium( String d )
@@ -11,20 +12,16 @@ public class Premium extends LeafDecorator
     // premium topping +1.50
     public void setOptions( String[] options )
     {
-        this.options = options ;
-        if ( options.length > 0 )
-            this.price += options.length * 1.50 ;
+    	for(String option:options) {
+    		PremiumOptions selection = PremiumOptions.findByDescription(option);
+			this.options.addItem(selection);
+    		this.price+=DEFAULT_PRICE+selection.getPrice();
+    	}
     }
     
     public String getDescription() 
     {
-        String desc = "   " ;
-        for ( int i = 0; i<options.length; i++ )
-        {
-            if (i>0) desc += " + " + options[i] ;
-            else desc = options[i] ;
-        }        
-        return desc ;
+    	return options.getDescription();
     }
     
 }

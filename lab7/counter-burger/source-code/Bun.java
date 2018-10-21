@@ -1,8 +1,8 @@
-public class Burger extends LeafDecorator
+public class Bun extends LeafDecorator
 {
     private PricedListDecorator options =new PricedListDecorator();
     
-    public Burger( String d )
+    public Bun( String d )
     {
         super(d) ;
     }
@@ -10,9 +10,9 @@ public class Burger extends LeafDecorator
     public void setOptions( String[] options )
     {
     	for(String option:options) {
-    		BurgerOptions selection = BurgerOptions.findByDescription(option);
+    		BunOptions selection = BunOptions.findByDescription(option);
 			this.options.addItem(selection);
-			this.price += selection.getPrice();
+			this.price+=selection.getPrice();
     	}
     }
     

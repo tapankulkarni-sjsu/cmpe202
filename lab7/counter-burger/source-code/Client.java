@@ -8,5 +8,9 @@ public class Client {
         theOrder.printDescription();
 
     }
+    
+    public static void main(String[] args) {
+		runTest();
+	}
 }
  

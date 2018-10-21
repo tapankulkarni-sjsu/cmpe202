@@ -1,9 +1,9 @@
-public class Sauce extends LeafDecorator
+public class Side extends LeafDecorator
 {
-    private static final Double DEFAULT_PRICE = 0.50d;
+    private static final Double DEFAULT_PRICE = 3d;
 	private PricedListDecorator options =new PricedListDecorator();
     
-    public Sauce( String d )
+    public Side( String d )
     {
         super(d) ;
     }
@@ -11,12 +11,9 @@ public class Sauce extends LeafDecorator
     public void setOptions( String[] options )
     {
     	for(String option:options) {
-    		SauceOptions selection = SauceOptions.findByDescription(option);
+    		SideOptions selection = SideOptions.findByDescription(option);
 			this.options.addItem(selection);
     		this.price+=DEFAULT_PRICE+selection.getPrice();
-    	}
-    	if(this.price>=DEFAULT_PRICE) {//Adjusting for 1 free
-    		this.price-=DEFAULT_PRICE;
     	}
     }
     

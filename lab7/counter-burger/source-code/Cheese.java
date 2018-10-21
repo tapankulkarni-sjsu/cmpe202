@@ -1,30 +1,28 @@
 public class Cheese extends LeafDecorator
 {
-    private String[] options ;
-    
+    private static final Double DEFAULT_PRICE = 1d;
+	private PricedListDecorator options =new PricedListDecorator();
     
     public Cheese( String d )
     {
         super(d) ;
     }
     
-    // 1 cheese free, extra cheese +1.00
     public void setOptions( String[] options )
     {
-        this.options = options ;
-        if ( options.length > 1 )
-            this.price += (options.length-1) * 1.00 ;
+    	for(String option:options) {
+    		CheeseOptions selection = CheeseOptions.findByDescription(option);
+			this.options.addItem(selection);
+    		this.price+=DEFAULT_PRICE+selection.getPrice();
+    	}
+    	if(this.price>=DEFAULT_PRICE) {//Adjusting for 1 free
+    		this.price-=DEFAULT_PRICE;
+    	}
     }
     
     public String getDescription() 
     {
-        String desc = "   " ;
-        for ( int i = 0; i<options.length; i++ )
-        {
-            if (i>0) desc += " + " + options[i] ;
-            else desc = options[i] ;
-        }        
-        return desc ;
+        return options.getDescription();
     }
     
 }

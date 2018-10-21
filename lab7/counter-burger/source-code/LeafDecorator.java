@@ -1,7 +1,3 @@
-
-import java.text.DecimalFormat;
-
-
 public abstract class LeafDecorator extends Leaf implements PriceDecorator
 {  
    PriceDecorator wrapped ;
@@ -9,7 +5,7 @@ public abstract class LeafDecorator extends Leaf implements PriceDecorator
    public LeafDecorator( String d ) {
        super( d ) ;
        this.wrapped = null ;
-    }
+   }
 
    public void wrapDecorator( PriceDecorator w ) 
    {
