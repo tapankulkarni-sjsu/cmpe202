@@ -10,12 +10,21 @@ public class CreditCardNum implements IDisplayComponent, IKeyEventHandler
     	this.nextHandler = next ;
     }	
 
+	protected String getNumber() {
+		return number;
+	}
+
+    
 	public String display() {
 		if ( number.equals("") )
 			return "[4444 4444 4444 4444]" + "  " ;
 		else
-			return "[" + number + "]" + "  " ;
+			return "[" + getFormattedNumber() + "]" + "  " ;
 	}	
+
+	protected String getFormattedNumber() {
+		return number;
+	}
 
 	public void key(String ch, int cnt) {
 		if ( cnt <= 16 )

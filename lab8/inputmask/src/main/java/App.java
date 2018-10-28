@@ -14,8 +14,8 @@ public class App {
     public App() {
 
         screen = new Screen();
-        num = new CreditCardNum();
-        exp = new CreditCardExp();
+        num = new CreditCardFormattedNum();
+        exp = new CreditCardFormattedExp();
         cvc = new CreditCardCVC();
 
         screen.addSubComponent(num);
