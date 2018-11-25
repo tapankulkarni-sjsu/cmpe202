@@ -12,3 +12,4 @@ Using aspects, code for Gumballmachine is simpler for extension. To accept more 
 ![alt text](https://github.com/tapankulkarni-sjsu/cmpe202/blob/master/lab10/Gumballmachine_V2Config1.png)
 ![alt text](https://github.com/tapankulkarni-sjsu/cmpe202/blob/master/lab10/Gumballmachine_V2_Config_2.png)
 ![alt text](https://github.com/tapankulkarni-sjsu/cmpe202/blob/master/lab10/Gumballmachine_V2_config22.png)
+![alt text](https://github.com/tapankulkarni-sjsu/cmpe202/blob/master/lab10/Gumballmachine_config3.png)
