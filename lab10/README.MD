@@ -8,3 +8,7 @@ Using aspects, code for Gumballmachine is simpler for extension. To accept more 
 ![alt text](https://github.com/tapankulkarni-sjsu/cmpe202/blob/master/lab10/Gumball%20V2%20model.png)
 ![alt text](https://github.com/tapankulkarni-sjsu/cmpe202/blob/master/lab10/Running%20Gumball%20V1%20.png)
 ![alt text](https://github.com/tapankulkarni-sjsu/cmpe202/blob/master/lab10/Running%20Gumball%20V2.png)
+![alt text](https://github.com/tapankulkarni-sjsu/cmpe202/blob/master/lab10/Gumballmachine_V1_config_1.png)
+![alt text](https://github.com/tapankulkarni-sjsu/cmpe202/blob/master/lab10/Gumballmachine_V2Config1.png)
+![alt text](https://github.com/tapankulkarni-sjsu/cmpe202/blob/master/lab10/Gumballmachine_V2_Config_2.png)
+![alt text](https://github.com/tapankulkarni-sjsu/cmpe202/blob/master/lab10/Gumballmachine_V2_config22.png)
